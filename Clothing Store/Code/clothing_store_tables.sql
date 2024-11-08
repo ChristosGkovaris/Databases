@@ -5,11 +5,13 @@ CREATE TABLE Clothes (
     clothes_average_stars REAL
 );
 
+
 CREATE TABLE Customer (
     customer_ID INTEGER PRIMARY KEY,
     customer_name TEXT NOT NULL,
     customer_address TEXT
 );
+
 
 CREATE TABLE Availability (
     clothes_ID INTEGER,
@@ -20,6 +22,7 @@ CREATE TABLE Availability (
     PRIMARY KEY (clothes_ID, clothes_colour, clothes_size),
     FOREIGN KEY (clothes_ID) REFERENCES Clothes(clothes_ID) ON DELETE CASCADE
 );
+
 
 CREATE TABLE Rating (
     rating_code INTEGER PRIMARY KEY AUTOINCREMENT,
