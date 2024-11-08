@@ -6,6 +6,7 @@ CREATE TABLE Restaurant (
     restaurant_average_rating REAL NOT NULL
 );
 
+
 CREATE TABLE Food (
     food_ID INTEGER PRIMARY KEY,
     restaurant_ID INTEGER,
@@ -13,6 +14,7 @@ CREATE TABLE Food (
     food_price REAL NOT NULL,
     FOREIGN KEY (restaurant_ID) REFERENCES Restaurant(restaurant_ID) ON DELETE CASCADE
 );
+
 
 CREATE TABLE Customer (
     customer_ID INTEGER PRIMARY KEY,
@@ -22,6 +24,7 @@ CREATE TABLE Customer (
     customer_delivery address TEXT NOT NULL,
     customer_payment_method TEXT NOT NULL
 );
+
 
 CREATE TABLE Order (
     order_ID INTEGER PRIMARY KEY,
@@ -36,6 +39,7 @@ CREATE TABLE Order (
     FOREIGN KEY (courier_ID) REFERENCES Courier(courier_ID) ON DELETE CASCADE
 );
 
+
 CREATE TABLE Order_Food (
     order_ID INTEGER,
     food_ID INTEGER,
@@ -44,6 +48,7 @@ CREATE TABLE Order_Food (
     FOREIGN KEY (order_ID) REFERENCES Order(order_ID) ON DELETE CASCADE,
     FOREIGN KEY (food_ID) REFERENCES Food(food_ID) ON DELETE CASCADE
 );
+
 
 CREATE TABLE Courier (
     courier_ID INTEGER PRIMARY KEY,
