@@ -7,7 +7,21 @@ additional SQL scripts for managing data in specific use-case scenarios.
 ## Code Overview
 **Q1.sql:** Retrieve all students from the `student` table and sort them in ascending order by their years in the program.
 
+**Q1_1.sql:** Retrieve students who have completed more than 30 credits, sorted by their GPA in descending order.
+
+**Q1_2.sql:** List students with a GPA higher than 3.5, including their department and year of study.
+
+**Q1_3.sql:** Find students enrolled in multiple courses and display their total credits.
+
+**Q1_4.sql:** Retrieve students who have not enrolled in any courses during the current semester.
+
+**Q1_5.sql:** Display the names and emails of students who are on academic probation.
+
+**Q1_6.sql:** Identify students with the highest GPA in each department.
+
 **Q2.sql:** Identify the maximum number of years a student has spent in the program.
+
+**Q2_1.sql:** Retrieve the details of students who have spent the longest time in the program, grouped by department.
 
 **Q3.sql:** Count the total number of students who are currently in their 3rd or 4th year of the program.
 
